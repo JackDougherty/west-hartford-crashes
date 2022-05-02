@@ -1,7 +1,7 @@
 var map = L.map('map', {
     zoomControl: false,
-    center: [41.763356, -72.738662],
-    zoom: 14,
+    center: [41.761755, -72.765270],
+    zoom: 13,
     minZoom: 12,
     attributionControl: false,
     preferCanvas: true
@@ -58,7 +58,7 @@ Papa.parse('./data/crashes.csv', {
                 : ('From ' + formattedFrom + ' to ' + formattedTo)
 
             text += ', there ' + (crashesTotal === 1 ? 'was ' : 'were ') + (crashesTotal === 0 ? 'no' : crashesTotal.toLocaleString())
-            text += ' car crash' + (crashesTotal === 1 ? '' : 'es') + ' in Hartford.'
+            text += ' car crash' + (crashesTotal === 1 ? '' : 'es') + ' in West Hartford.'
 
             if (crashesTotal > 1) {
                 text += ' Of those, ' + (crashesPed > 0 ? crashesPed.toLocaleString() : ' none');
