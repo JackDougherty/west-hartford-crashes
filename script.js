@@ -1,7 +1,7 @@
 var map = L.map('map', {
     zoomControl: false,
-    center: [41.763, -72.675],
-    zoom: 15,
+    center: [41.763356, -72.738662],
+    zoom: 14,
     minZoom: 12,
     attributionControl: false,
     preferCanvas: true
@@ -37,7 +37,7 @@ function tsToDate(ts) {
 }
 
 var initFrom = dateToTS(new Date(2020, 0, 1));
-var initTo = dateToTS(new Date(2020, 7, 31));
+var initTo = dateToTS(new Date(2021, 11, 31));
 
 Papa.parse('./data/crashes.csv', {
     download: true,
@@ -159,7 +159,7 @@ Papa.parse('./data/crashes.csv', {
             type: 'double',
 
             min: dateToTS(new Date(2015, 0, 1)),
-            max: dateToTS(new Date(2020, 7, 31)),
+            max: dateToTS(new Date(2021, 11, 31)),
 
             from: initFrom,
             to: initTo,
@@ -209,6 +209,6 @@ Papa.parse('./data/crashes.csv', {
 })
 
 L.control.attribution({
-    prefix: 'View <a href="https://github.com/Picturedigits/hartford-crashes">code on GitHub</a> \
+    prefix: 'View <a href="https://github.com/Picturedigits/hartford-crashes">original code on GitHub</a> \
       by Picturedigits for <a href="https://www.ctprf.org/programs_services/transport-hartford/" target="_blank">TransportHartford</a>'
 }).addTo(map)
