@@ -1,8 +1,10 @@
-# Hartford Crashes
+# West Hartford Crashes
 
-Interactive heatmap of car crashes in Hartford between 2015 and 2020 which
+View [interactive heatmap of car crashes in West Hartford CT](https://jackdougherty.github.io/west-hartford-crashes/index.html) from 2015 thru 2021, which
 displays pre-processed data from [UConn Crash Data Repository](https://www.ctcrash.uconn.edu/).
-It can be adapted for other towns in Connecticut, or other states that have similar data.
+
+## Credits
+Adapted by [Jack Dougherty](https://jackbikes.org) from the [original Hartford Crash Data heatmap](https://github.com/Picturedigits/hartford-crashes) created by Ilya Ilyankou at [Picturedigits](https://www.picturedigits.com) for Transport Hartford. This open-source Jupyter Notebook data processor and Leaflet map code can be adapted for other towns in Connecticut, or other states that have similar data.
 
 ![Heatmap gif](./img/demo.gif)
 
@@ -17,7 +19,7 @@ as one export, and 2019-2020 as another).
 6. Open `ProcessCrashes.ipynb` notebook, and add your export IDs (numbers) to the `exports` list.
 7. Run the notebook. This should generate a CSV (`crashes.csv`) and a JSON file (`crashes.json`) with relevant data.
 
-## Modify map's appearance
+## Modify the Leaflet map appearance
 
 This map is fully front-end, and loads data once from the CSV file using PapaParse JS library. You
 can change it to fetch the JSON file using `$.getJSON()` function of jQuery, although it is slightly
