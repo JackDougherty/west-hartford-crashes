@@ -36,8 +36,9 @@ function tsToDate(ts) {
     });
 }
 
-var initFrom = dateToTS(new Date(2020, 0, 1));
-var initTo = dateToTS(new Date(2021, 11, 31));
+// change dates, where Jan = 0 and Dec = 11
+var initFrom = dateToTS(new Date(2017, 0, 1));
+var initTo = dateToTS(new Date(2022, 11, 27));
 
 Papa.parse('./data/crashes.csv', {
     download: true,

@@ -28,8 +28,13 @@ This open-source GitHub repository includes a Jupyter Notebook data processor an
 11. Important: Go back to step 1 and run the notebook. After all steps are complete, it should generate a new CSV (`crashes.csv`) and a JSON file (`crashes.json`) in the `data/` folder.
 12. Migrate any relevant files from your local computer to your forked GitHub repository online, and use the GitHub Pages setting to host your repo online.
 
-### Modify the Leaflet map appearance
-1. Modify the `index.html` of the Leaflet map in your forked GitHub repository to set custom map title, and `script.js` to change initial coordinates, date ranges, and anything else related to the map.
+### Modify the Leaflet map settings
+1. Modify the `index.html` of the Leaflet map in your forked GitHub repository to set custom map title, and `script.js` to change initial coordinates, date ranges, and anything else related to the map. Example:
+```
+// change dates, where Jan = 0 and Dec = 11
+var initFrom = dateToTS(new Date(2017, 0, 1));
+var initTo = dateToTS(new Date(2022, 11, 27));  
+```
 2. This map is fully front-end, and loads data once from the CSV file using PapaParse JS library. Optional: You can change the code to fetch the JSON file using `$.getJSON()` function of jQuery, although it is slightly heavier than the CSV.
 
 ### I still have questions
