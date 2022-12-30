@@ -1,9 +1,9 @@
-# West Hartford Crash Map
+# West Hartford Crashes
 
-Interactive heatmap of car crashes in West Hartford CT from 2015 to present, displaying pre-processed data from UConn Crash Data Repository
+Data visualization of motor vehicle crashes in West Hartford CT from 2015 to present, displaying pre-processed data from UConn Crash Data Repository
 
 ## Links
-- Live map https://bikewesthartford.github.io/wh-crash-map
+- Live map https://bikewesthartford.github.io/wh-crashes
 - UConn Crash Data Repository https://www.ctcrash.uconn.edu
 
 ## Credits
