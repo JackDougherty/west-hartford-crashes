@@ -4,15 +4,16 @@ Data visualization of motor vehicle crashes in West Hartford CT from 2015 to pre
 
 ## Links
 - Live map https://bikewesthartford.github.io/wh-crashes
-- UConn Crash Data Repository https://www.ctcrash.uconn.edu
 
 ## Credits
 Adapted by [Jack Dougherty](https://jackdougherty.org) from the [original Hartford Crash Data heatmap](https://github.com/Picturedigits/hartford-crashes) created by Ilya Ilyankou at [Picturedigits](https://www.picturedigits.com) for Transport Hartford.
 
+The UConn Crash Data Repository <https://www.ctcrash.uconn.edu> is "designed to provide access to select crash information collected by state and local police." See notes on their site about data collection and intrepretation.
+
 ![Heatmap gif](./img/demo.gif)
 
 ## Create Your Own
-This open-source GitHub repository includes a Jupyter Notebook data processor and Leaflet map code that can be adapted for other towns in Connecticut, or other states that have similar data. These instructions assume you have some familiarity with creating your own fork and hosting a GitHub repository of simple Leaflet map code. If not, read [Chapter 10: Edit and Host Code in GitHub](https://handsondataviz.org/github.html) in our Hands-On Data Visualization book.
+This open-source GitHub repository includes a JupyterLab notebook data processor and Leaflet map code that can be adapted for other towns in Connecticut, or other states that have similar data. These instructions assume you have some familiarity with creating your own fork and hosting a GitHub repository of simple Leaflet map code. If not, read [Chapter 10: Edit and Host Code in GitHub](https://handsondataviz.org/github.html) in our Hands-On Data Visualization book.
 
 ### Setup and Download Data from UConn Crash Repository
 1. Create your own fork of this GitHub repository. Recommended: Use GitHub Desktop to migrate files between your online repository and your local computer.
