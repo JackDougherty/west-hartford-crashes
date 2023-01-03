@@ -38,7 +38,7 @@ function tsToDate(ts) {
 
 // display initial data, where Jan = 0 and Dec = 11
 var initFrom = dateToTS(new Date(2020, 0, 1));
-var initTo = dateToTS(new Date(2022, 11, 27));
+var initTo = dateToTS(new Date(2022, 11, 31));
 
 Papa.parse('./data/crashes.csv', {
     download: true,
