@@ -41,13 +41,13 @@ Important: Person Type Codes in UConn Crash Data Repo do NOT match MMUCC Person 
 This tool displays crashes according to Most Severe Injury code, among any injuries reported, in the UConn Crash Data Repo. Do NOT confuse Most Severe Injury with either Crash Severity in the UConn Crash data (which does not distinguish between types of injuries) or the total number of injured people (which is higher because each crash may have multiple injuries). The 5 codes for Most Severe Injury in the UConn Crash data match these MMUCC codes for Crash Severity (section C19, PDF p. 30), based on MMUCC codes for Injury Status (section P5, PDF p. 62)
 
 - K = Fatal: A fatal injury is any injury that results in death within 30 days after the motor vehicle crash in which the injury occurred. If the person did not die at the scene but died within 30 days of the motor vehicle crash in which the injury occurred, the injury classification should be changed from the attribute previously assigned to the attribute “Fatal Injury.”
-- A = Suspected Serious Injury: A suspected serious injury is any injury other than fatal which results in one or more of the following: 
-    - Severe laceration resulting in exposure of underlying tissues/muscle/organs or resulting in significant loss of blood 
-    - Broken or distorted extremity (arm or leg) 
-    - Crush injuries 
-    - Suspected skull, chest or abdominal injury other than bruises or minor lacerations 
-    - Significant burns (second and third degree burns over 10% or more of the body) 
-    - Unconsciousness when taken from the crash scene 
+- A = Suspected Serious Injury: A suspected serious injury is any injury other than fatal which results in one or more of the following:
+    - Severe laceration resulting in exposure of underlying tissues/muscle/organs or resulting in significant loss of blood
+    - Broken or distorted extremity (arm or leg)
+    - Crush injuries
+    - Suspected skull, chest or abdominal injury other than bruises or minor lacerations
+    - Significant burns (second and third degree burns over 10% or more of the body)
+    - Unconsciousness when taken from the crash scene
     - Paralysis
 - B = Suspected Minor Injury: A minor injury is any injury that is evident at the scene of the crash, other than fatal or serious injuries.
 - C = Possible Injury: A possible injury is any injury reported or claimed which is not a fatal, suspected serious, or suspected minor injury. Examples include momentary loss of consciousness, claim of injury, limping, or complaint of pain or nausea. Possible injuries are those that are reported by the person or are indicated by his/her behavior, but no wounds or injuries are readily evident.
@@ -60,7 +60,7 @@ Furthermore, in this tool we combine and abbreviate *Injuries* as follows:
 - Other = B + C
 - Property Damage = 0
 
-Note: Police report injury severity as *suspected* or *possible*
+Note: Based on police reports of *suspected* or *possible* injuries
 
 To be clear, police may not have training or time to accurately distinguish between *serious* or *minor* or *possible* injuries. But our tool separates *fatal* and *serious* injuries apart from others, based on the best available data, because these most severe categories matter for Vision Zero transportation safety planning.
 
