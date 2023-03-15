@@ -64,6 +64,29 @@ Note: Based on police reports of *suspected* or *possible* injuries
 
 To be clear, police may not have training or time to accurately distinguish between *serious* or *minor* or *possible* injuries. But our tool separates *fatal* and *serious* injuries apart from others, based on the best available data, because these most severe categories matter for Vision Zero transportation safety planning.
 
+### Crash Location and Route Class
+Crash location is based on the GPS coordinates (or similar) reported by the police. When downloading data from UConn Crash Data Repo by Crash Location = Town, we found a percentage of locations were geocoded outside of the town boundaries and therefore are not reliable:
+
+**INSERT Hartford and West Hartford percents**
+
+Along with Crash Location, the UConn Crash Data Repo lists these Route Class categories:
+- 0 = Unknown
+- 1 = Interstate
+- 2 = US Route
+- 3 = State
+- 4 = Local
+
+To judge the quality of data collection for Route Class categories, we plotted all crash geocoordinates on a map, and also made pivot tables of Route Class by Road Description and also by Roadway Name. We also compared Route Class with [recent CT DOT geodata of state and local roads](https://data.ct.gov/Transportation/CTDOT-State-Routes-and-Local-Roads/u344-x8ib) and [Wikipedia entry for CT State Roads](https://en.wikipedia.org/wiki/List_of_state_routes_in_Connecticut).
+
+West Hartford, 2015-2022
+
+- 70 out of 14080 (0.5%) locations could not be geocoded inside West Hartford boundaries
+- Route Class blank = 687 out of 14080 (about 5%)
+- 1 = Interstate geocoding appears accurate, and pivot table appears accurate
+- 2 = US Route pivot table contains accurate entries for for Albany Ave (US Route 44), but also 6 incorrect entries for King Philip Dr, Mountain Rd, N Main St (CT Rt 218)
+- 3 = State contains accurate entries for New Britain Ave (with sections known as CT 71 near the mall, CT 173 including some S Main and Newington Rd, and CT 529), Simsbury Road (CT 185), Bloomfield Ave (CT 189). But it also includes many non-verifiable entries for 500-level service roads and others that seem inaccurate (Ridgewood Road, Park Road, Mayflower Street, several I-84 entrances).
+- In general, Route Class 2 and 3 seem less reliable as separate entries than Route Classes 1 and 4.
+
 ## Create Your Own Version
 This open-source GitHub repository includes a JupyterLab notebook data processor and Leaflet map code that can be adapted for other towns in Connecticut, or other states that have similar data. These instructions assume you have some familiarity with creating your own fork and hosting a GitHub repository of simple Leaflet map code. If not, read [Chapter 10: Edit and Host Code in GitHub](https://handsondataviz.org/github.html) in our Hands-On Data Visualization book.
 
