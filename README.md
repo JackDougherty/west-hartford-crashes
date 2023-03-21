@@ -65,9 +65,7 @@ Note: Based on police reports of *suspected* or *possible* injuries
 To be clear, police may not have training or time to accurately distinguish between *serious* or *minor* or *possible* injuries. But our tool separates *fatal* and *serious* injuries apart from others, based on the best available data, because these most severe categories matter for Vision Zero transportation safety planning.
 
 ### Crash Location and Route Class
-Crash location is based on the GPS coordinates (or similar) reported by the police. When downloading data from UConn Crash Data Repo by Crash Location = Town, we found a percentage of locations were geocoded outside of the town boundaries and therefore are not reliable:
-
-**INSERT Hartford and West Hartford percents**
+Crash location is based on the GPS coordinates (or similar) reported by the police. When downloading data from UConn Crash Data Repo by Crash Location = Town, we found a small percentage of locations were geocoded outside of the town boundaries and therefore are not reliable.
 
 Along with Crash Location, the UConn Crash Data Repo lists these Route Class categories:
 - 0 = Unknown
@@ -85,7 +83,7 @@ West Hartford, 2015-2022
 - 1 = Interstate geocoding appears accurate, and pivot table appears accurate
 - 2 = US Route pivot table contains accurate entries for for Albany Ave (US Route 44), but also 6 incorrect entries for King Philip Dr, Mountain Rd, N Main St (CT Rt 218)
 - 3 = State contains accurate entries for New Britain Ave (with sections known as CT 71 near the mall, CT 173 including some S Main and Newington Rd, and CT 529), Simsbury Road (CT 185), Bloomfield Ave (CT 189). But it also includes many non-verifiable entries for 500-level service roads and others that seem inaccurate (Ridgewood Road, Park Road, Mayflower Street, several I-84 entrances).
-- In general, Route Class 2 and 3 seem less reliable as separate entries than Route Classes 1 and 4.
+- In general, Route Class 2 and 3 seem less reliable as separate entries than Route Classes 1 and 4. So we recommend displaying Roadway data in two groups: Local-State-US vs. Interstate Highway.
 
 ## Create Your Own Version
 This open-source GitHub repository includes a JupyterLab notebook data processor and Leaflet map code that can be adapted for other towns in Connecticut, or other states that have similar data. These instructions assume you have some familiarity with creating your own fork and hosting a GitHub repository of simple Leaflet map code. If not, read [Chapter 10: Edit and Host Code in GitHub](https://handsondataviz.org/github.html) in our Hands-On Data Visualization book.
@@ -95,7 +93,7 @@ This open-source GitHub repository includes a JupyterLab notebook data processor
 2. Navigate to https://www.ctcrash.uconn.edu/ and create an account if you don't have one yet.
 3. Log in, and go to `Data Query Tool`.
 4. Select a `MMUCC(2015-)` dataset, specify dates and town (or multiple towns).
-5. Run the query, and then click `Export To CSV` button above the interactive table. A link will be sent to your email account to download the archive. Note that the tool may prevent you from exporting datasets that are "too large". In that case, break down your query (for example, instead of downloading 2015-2020 data, do 2015-2018 as one export, and 2019-2020 as another).
+5. Run the query, and then click `Export To CSV` button above the interactive table. A link will be sent to your email account to download the archive. Note that the tool may prevent you from exporting datasets that are "too large". In that case, break down your query (for example, instead of downloading 2015-2020 data, do 2015-2018 as one export, and 2019-2020 as another). You can separate uploads with commas in the JupyterLab steps below.
 6. Unzip the archive(s), then move the `export_#####` folder to place it inside the `data/` folder of your forked GitHub repository.
 7. Delete the existing files named `crashes.csv` and `crashes.json` in the data folder, and also the existing `export_old###` folder.
 
