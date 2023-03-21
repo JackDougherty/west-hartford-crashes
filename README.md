@@ -51,14 +51,14 @@ This tool displays crashes according to Most Severe Injury code, among any injur
     - Paralysis
 - B = Suspected Minor Injury: A minor injury is any injury that is evident at the scene of the crash, other than fatal or serious injuries.
 - C = Possible Injury: A possible injury is any injury reported or claimed which is not a fatal, suspected serious, or suspected minor injury. Examples include momentary loss of consciousness, claim of injury, limping, or complaint of pain or nausea. Possible injuries are those that are reported by the person or are indicated by his/her behavior, but no wounds or injuries are readily evident.
-- O = No Apparent Injury: No apparent injury is a situation where there is no reason to believe that the person received any bodily harm from the motor vehicle crash. There is no physical evidence of injury and the person does not report any change in normal function.
+- O (letter) = No Apparent Injury: No apparent injury is a situation where there is no reason to believe that the person received any bodily harm from the motor vehicle crash. There is no physical evidence of injury and the person does not report any change in normal function.
 
 Furthermore, in this tool we combine and abbreviate *Injuries* as follows:
 
 - Fatal = K
 - Serious = A
 - Other = B + C
-- Property Damage = 0
+- Property Damage Only = O (letter), which we define as crash report without human injury
 
 Note: Based on police reports of *suspected* or *possible* injuries
 

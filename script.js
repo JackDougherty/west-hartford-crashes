@@ -101,7 +101,7 @@ Papa.parse('./data/crashes.csv', {
                         || ($('#seriousInjury').prop('checked') ? point.s === 'A' : false)
                         || ($('#otherInjury').prop('checked') ? point.s === 'B' : false)
                         || ($('#otherInjury').prop('checked') ? point.s === 'C' : false)
-                        || ($('#propertyDamage').prop('checked') ? point.s === 'O' : false))
+                        || ($('#propertyDamageOnly').prop('checked') ? point.s === 'O' : false))
             });
 
             updateStatsText(
