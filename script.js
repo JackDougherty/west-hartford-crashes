@@ -90,8 +90,8 @@ Papa.parse('./data/crashes.csv', {
             })
 
             var crashesFiltered = crashes.filter(function (point) {
-                return (($('#local').prop('checked') ? point.r !== 1 : false)
-                    || ($('#highways').prop('checked') ? point.r === 1 : false))
+                return (($('#localStateUS').prop('checked') ? point.r !== 1 : false)
+                    || ($('#interstate').prop('checked') ? point.r === 1 : false))
 
                     && (($('#vehiclesOnly').prop('checked') ? (point.c === 0 && point.p === 0) : false)
                         || ($('#cyclists').prop('checked') ? point.c === 1 : false)
