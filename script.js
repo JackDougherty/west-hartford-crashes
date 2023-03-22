@@ -38,7 +38,7 @@ function tsToDate(ts) {
 
 // display initial data, where Jan = 0 and Dec = 11
 var initFrom = dateToTS(new Date(2020, 0, 1));
-var initTo = dateToTS(new Date(2023, 2, 1));
+var initTo = dateToTS(new Date(2023, 2, 22));
 
 Papa.parse('./data/crashes.csv', {
     download: true,
@@ -164,7 +164,7 @@ Papa.parse('./data/crashes.csv', {
 
             // set full range display, where 0 = Jan and 11 = Dec
             min: dateToTS(new Date(2015, 0, 1)),
-            max: dateToTS(new Date(2023, 3, 1)),
+            max: dateToTS(new Date(2023, 3, 22)),
 
             from: initFrom,
             to: initTo,
