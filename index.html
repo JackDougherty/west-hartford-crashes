@@ -59,7 +59,7 @@
 
       <div id="filters" class="mt3 f6">
 
-        <h2 class="f5 mb1 mt3">Crash Participants</h5>
+        <h5 class="f5 mb1 mt3">Crash Participants</h5>
         <label>
           <input type="checkbox" id="vehiclesOnly" /> Vehicles only
         </label>
@@ -73,9 +73,13 @@
         </label>
 
         <!-- Relabeled injury categories -->
-        <h2 class="f5 mb1 mt3">Injuries*</h5>
+        <h5 class="f5 mb1 mt3">
+          Injuries
+          <small class="normal">Based on police reports of <i>suspected</i> or <i>possible</i> injuries</small>
+        </h5>
+        
         <label>
-          <input type="checkbox" id="fatal" class="ml2" /> Fatal
+          <input type="checkbox" id="fatalInjury" /> Fatal
         </label>
         <label>
           <input type="checkbox" id="seriousInjury" class="ml2" /> Serious
@@ -86,9 +90,8 @@
         <label>
           <input type="checkbox" id="propertyDamageOnly" /> Property damage only
         </label>
-        <br>*Based on police reports of <i>suspected</i> or <i>possible</i> injuries
 
-        <h2 class="f5 mb1 mt3">Roadways</h5>
+        <h5 class="f5 mb1 mt3">Roadways</h5>
         <label>
           <input type="checkbox" id="localStateUS" /> Local-State-US
         </label>
@@ -97,12 +100,17 @@
         </label>
 
 
-        <h2 class="f5 mb1 mt3">Map Appearance</h5>
+        <h5 class="f5 mb1 mt3">Map Appearance</h5>
         <label>
           <input type="checkbox" id="labels" checked="checked" /> Street labels
         </label>
-        <label class="ml4">
-          Intensity <input type="range" value="10" min="1" max="30" id="intensity" class="v-mid mr2" />
+
+        <label>
+          <input type="checkbox" id="pointsOnly" class="ml3" /> Points only 📍
+          <br>
+          <span class="intensity-wrapper dib pt2">
+            Intensity <input type="range" value="10" min="1" max="30" id="intensity" class="v-mid mr2" />
+          </span>
         </label>
 
       </div>
