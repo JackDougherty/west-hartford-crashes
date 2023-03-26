@@ -68,11 +68,11 @@ Papa.parse('./data/crashes.csv', {
                 text += ' involved a cyclist.';
             }
 
-            // TEMPORARILY removed this portion of statsText because count is wrong
-            // text += ' <span class="i ' + (filtered ? '' : 'red') + '">'
-            //     + (filtered ? filtered.toLocaleString() : 'No ') + ' crash'
-            //     + (filtered === 1 ? '' : 'es') + ' satisf' + (filtered === 1 ? 'ies' : 'y')
-            //     + ' your filtering criteria.</span>'
+            //TEMPORARILY removed this portion of statsText because count is wrong
+             text += ' <span class="i ' + (filtered ? '' : 'red') + '">'
+                 + (filtered ? filtered.toLocaleString() : 'No ') + ' crash'
+                 + (filtered === 1 ? '' : 'es') + ' satisf' + (filtered === 1 ? 'ies' : 'y')
+                 + ' your filtering criteria.</span>'
 
             $('#statsText').html(text)
 
@@ -90,9 +90,9 @@ Papa.parse('./data/crashes.csv', {
             })
 
             var crashesFiltered = crashes.filter(function (point) {
-                return (($('#localStateUS').prop('checked') ? point.r !== 1 : false)
+                return (($('#localStateUS').prop('checked') ? point.r != 1 : false)
                     || ($('#interstate').prop('checked') ? point.r === 1 : false))
-
+                    
                     && (($('#vehiclesOnly').prop('checked') ? (point.c === 0 && point.p === 0) : false)
                         || ($('#cyclists').prop('checked') ? point.c === 1 : false)
                         || ($('#pedestrians').prop('checked') ? point.p === 1 : false))
@@ -101,8 +101,15 @@ Papa.parse('./data/crashes.csv', {
                         || ($('#seriousInjury').prop('checked') ? point.s === 'A' : false)
                         || ($('#otherInjury').prop('checked') ? point.s === 'B' : false)
                         || ($('#otherInjury').prop('checked') ? point.s === 'C' : false)
+                        || ($('#otherInjury').prop('checked') ? !point.s : false) // when injury type = null
                         || ($('#propertyDamageOnly').prop('checked') ? point.s === 'O' : false))
             });
+
+
+            let a = new Set(crashes.map(x => x.id));
+            let b = new Set(crashesFiltered.map(x => x.id));
+            let a_minus_b = new Set([...a].filter(x => !b.has(x)));
+            console.log(a_minus_b)
 
             updateStatsText(
                 tsToDate(from * 100000),  // Date from
@@ -119,8 +126,10 @@ Papa.parse('./data/crashes.csv', {
             // Update the heatlayer
             var intensity = $('#intensity').val();
 
+            let pointsOnly = $('#pointsOnly').prop('checked');
+
             // If zoomed in all the way, show points instead of a heatmap
-            if (map.getZoom() >= 18) {
+            if ( map.getZoom() >= 18 || pointsOnly ) {
 
                 heat.setLatLngs([]);
 
@@ -206,7 +215,7 @@ Papa.parse('./data/crashes.csv', {
         })
 
         // Set default properties
-        $('#filters input').prop('checked', 'checked');
+        $('#filters input').not('#pointsOnly').prop('checked', 'checked');
         $('#intensity').val(5);
         updateHeatLayer(initFrom, initTo);
 

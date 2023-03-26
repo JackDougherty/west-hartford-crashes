@@ -27,3 +27,15 @@
 #legend {
     width: 450px;
 }
+
+#pointsOnly:checked ~ .intensity-wrapper {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/*
+.points-only-wrapper:has(#pointsOnly:checked) {
+  opacity: 0.5;
+  pointer-events: none;
+}*/
+
