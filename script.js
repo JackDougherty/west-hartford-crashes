@@ -138,8 +138,8 @@ Papa.parse('./data/crashes.csv', {
 
                     var circle = L.circleMarker([crash.x, crash.y], {
                         radius: 5,
-                        color: '#002147',
-                        fillColor: '#002147',
+                        color: '#ff0000',
+                        fillColor: '#ff0000',
                         fillOpacity: 0.8,
                         opacity: 0.8,
                         weight: 0,
