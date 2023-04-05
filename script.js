@@ -68,11 +68,11 @@ Papa.parse('./data/crashes.csv', {
                 text += ' involved a cyclist.';
             }
 
-            //TEMPORARILY removed this portion of statsText because count is wrong
+            // modified statsText about filter results
              text += ' <span class="i ' + (filtered ? '' : 'red') + '">'
-                 + (filtered ? filtered.toLocaleString() : 'No ') + ' crash'
-                 + (filtered === 1 ? '' : 'es') + ' satisf' + (filtered === 1 ? 'ies' : 'y')
-                 + ' your filtering criteria.</span>'
+                 + 'Your checkboxes below show '
+                 + (filtered ? filtered.toLocaleString() : 'no ') + ' crash'
+                 + (filtered === 1 ? '' : 'es') + '.</span>'
 
             $('#statsText').html(text)
 
