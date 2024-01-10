@@ -93,7 +93,9 @@ This open-source GitHub repository includes a JupyterLab notebook data processor
 2. Navigate to https://www.ctcrash.uconn.edu/ and create an account if you don't have one yet.
 3. Log in, and go to `Data Query Tool`.
 4. Select a `MMUCC(2015-)` dataset, specify dates and town (or multiple towns).
-5. Run the query, and then click `Export To CSV` button above the interactive table. A link will be sent to your email account to download the archive. Note that the tool may prevent you from exporting datasets that are "too large". In that case, break down your query (for example, instead of downloading 2015-2020 data, do 2015-2018 as one export, and 2019-2020 as another). You can separate uploads with commas in the JupyterLab steps below.
+5. Run the query, and then click `Export To CSV` button above the interactive table. A link will be sent to your email account to download the archive.
+    - Note that if the email link does not correctly download the zipped file, you can go back to the UConn Crash Data Repo home page, under your logged-in user profile, and View Recent Export Requests to re-download directly from their site.
+    - Note that the tool may prevent you from exporting datasets that are "too large". In that case, break down your query (for example, instead of downloading 2015-2020 data, do 2015-2018 as one export, and 2019-2020 as another). You can separate uploads with commas in the JupyterLab steps below.
 6. Unzip the archive(s), then move the `export_#####` folder to place it inside the `data/` folder of your forked GitHub repository.
 7. Delete the existing files named `crashes.csv` and `crashes.json` in the data folder, and also the existing `export_old###` folder.
 
@@ -113,7 +115,7 @@ This open-source GitHub repository includes a JupyterLab notebook data processor
 var initFrom = dateToTS(new Date(2020, 0, 1));
 var initTo = dateToTS(new Date(2022, 11, 31));
 ```
-See also around line 159
+See also around line 174
 ```
 // Initialize Ion range slider
 var slider = $(".js-range-slider").ionRangeSlider({
